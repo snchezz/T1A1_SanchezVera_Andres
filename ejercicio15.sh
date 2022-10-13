@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ "$#" -eq "0" ]
+then
+  echo "No has introducido ningún parámetro"
+  exit
+else 
+  # Si hay parametros, se mostrara el numero y cuales son
+  # Definimos la variable especial que usa la shell a modo de separador. 
+  IFS='-'
+  # Mostramos por pantalla la lista completa de parámetros pasados al script separados por IFS. Este valor es una cadena
+  echo "$*"
+fi
